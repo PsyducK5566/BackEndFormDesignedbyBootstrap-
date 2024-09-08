@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> 
+    <script type="module" crossorigin src="/BackEndFormDesignedbyBootstrap-/assets/main-c178eb64.js"></script>
+    <link rel="stylesheet" href="/BackEndFormDesignedbyBootstrap-/assets/main-340d07c7.css">
+  </head>
+  <body>
+    <!-- 使用position-fixed固定。但是不會計算到排版裡會重疊，須要去把左側空間撐開來 -->
+<!-- https://bootstrap5.hexschool.com/docs/5.1/components/navs-tabs/ -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light vh-100 position-fixed top-0">
+  <div class="container-fluid d-flex flex-column align-items-start px-0 h-100">
+    <div>
+      <a class="navbar-brand my-4 px-2 ms-4" href="index.html">
+      <img src="/BackEndFormDesignedbyBootstrap-/assets/logo-ANSWER-5336fb45.svg" alt="ANSWER"/>
+      </a>  
+      <ul class="navbar-nav d-flex flex-column">
+        <li class="nav-item">
+          <a class="nav-link active mb-3" href="#">
+            <span class="material-symbols-outlined align-bottom ms-4 me-2"> assignment </span> Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active mb-3" href="#">
+            <span class="material-symbols-outlined align-bottom ms-4 me-2"> forum </span> Question </a>
+        </li>
+        <!-- border-start border-3 border-success text-success aria-current="page" href="#" -->
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active mb-3" >
+            <span class="material-symbols-outlined align-bottom ms-4 me-2"> analytics </span> Assignment
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active mb-3" href="#">
+            <span class="material-symbols-outlined align-bottom ms-4 me-2"> video_library </span> Course
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="admin.html" class="nav-link active mb-3">
+            <span class="material-symbols-outlined align-bottom ms-4 me-2"> group </span> Admin
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active mb-3">
+            <span class="material-symbols-outlined align-bottom ms-4 me-2"> settings </span> Settings 
+          </a>
+        </li>
+      </ul>
+    </div>
+<!-- https://bootstrap5.hexschool.com/docs/5.1/utilities/flex/ "Media object" -->
+<!-- https://bootstrap5.hexschool.com/docs/5.1/utilities/borders/ "Radius" -->
+<!-- https://getbootstrap.com/docs/5.3/utilities/object-fit/ -->
+    <div class="d-flex">
+      <div class="flex-shrink-0 ps-4 ms-2 pe-2 mb-4 pb-2">
+        <img
+            class="rounded-circle object-fit-cover"
+            width="48px"
+            height="48px"
+            src="/BackEndFormDesignedbyBootstrap-/assets/andychen-f14fef59.jpeg"
+            alt="Andy Chen"
+        />
+      </div>
+      <div class="flex-grow-1 ms-3">
+        <p class="fw-bold">Andy Chen</p>
+        <a href="mailto:andy0401@mail.com">andy0401@mail.com</a>
+      </div>
+    </div>
+  </div>
+</nav>
+    <main class="content">
+      <header class="d-flex justify-content-between align-items-center">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <h1 class="navbar-brand fw-bold" href="#"> Admin </h1>
+    <!-- https://bootstrap5.hexschool.com/docs/5.1/components/modal/  -->    
+    <!-- Button trigger modal -->
+            <button type="button" class="btn d-flex" data-bs-toggle="modal" data-bs-target="#NewAdmin">
+            <span class="material-symbols-outlined text-success me-2">add</span>
+            <p class="text-black-90"> Add New Admin </p>
+            </button>
+    <!-- Button trigger modal -->        
+          </div>
+        </nav>
+        <div class="d-flex">
+          <a href="#"><span class="material-symbols-outlined me-3"> search </span></a>
+          <a href="#"></a><span class="material-symbols-outlined"> notifications_active</span></a>
+        </div>
+      </header>
+    <!-- https://bootstrap5.hexschool.com/docs/5.1/content/tables/   -->
+      <section class="m-4">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col" class="d-flex align-items-center">ID<span class="material-symbols-outlined text-success">
+                arrow_downward
+                </span></th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Verified</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="align-middle">
+              <th scope="row">#1</th>
+              <td>Emir Wicks</td>
+              <td>emir.wicks@mail.com</td>
+              <td>Yes</td>
+              <td>
+    <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <span class="material-symbols-outlined me-4">visibility</span>
+              </button>
+    <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span class="material-symbols-outlined">edit</span>
+              </button>
+              </td>              
+            </tr>
+            <tr class="align-middle">
+              <th scope="row">#2</th>
+              <td>Zaina Goldsmith</td>
+              <td>zaina.goldsmith@mail.com</td>
+              <td>Yes</td>
+              <td>
+    <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <span class="material-symbols-outlined me-4">visibility</span>
+              </button>
+    <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span class="material-symbols-outlined">edit</span>
+              </button>
+              </td>
+            </tr>
+            <tr class="align-middle">
+              <th scope="row">#3</th>
+              <td>Mahima Lopez</td>
+              <td>mahima.lopez@mail.com</td>
+              <td>Yes</td>
+              <td>
+    <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <span class="material-symbols-outlined me-4">visibility</span>
+              </button>
+    <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span class="material-symbols-outlined">edit</span>
+              </button>
+              </td>
+            </tr>
+            <tr class="align-middle">
+              <th scope="row">#4</th>
+              <td>Pharrell Murray</td>
+              <td>pharrell.murray@mail.com</td>
+              <td>Yes</td>
+              <td>
+    <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <span class="material-symbols-outlined me-4">visibility</span>
+              </button>
+    <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span class="material-symbols-outlined">edit</span>
+              </button>
+              </td>
+            </tr>
+            <tr class="align-middle">
+              <th scope="row">#5</th>
+              <td>Annika Mcbride</td>
+              <td>annika.mcbride@mail.com</td>
+              <td>Yes</td>
+              <td>
+    <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <span class="material-symbols-outlined me-4">visibility</span>
+              </button>
+    <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span class="material-symbols-outlined">edit</span>
+              </button>
+              </td>
+            </tr>
+            <tr class="align-middle">
+              <th scope="row">#6</th>
+              <td>Fatimah Clark</td>
+              <td>fatimah.clark@mail.com</td>
+              <td>Yes</td>
+              <td>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <span class="material-symbols-outlined me-4">visibility</span>
+              </button>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span class="material-symbols-outlined">edit</span>
+              </button>
+              </td>
+            </tr>
+            <tr class="align-middle">
+              <th scope="row">#7</th>
+              <td>Klaudia Rhodes</td>
+              <td>klaudia.rhodes@mail.com</td>
+              <td>Yes</td>
+              <td>
+              <!-- Button trigger modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <span class="material-symbols-outlined me-4">visibility</span>
+            </button>
+              <!-- Button trigger modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span class="material-symbols-outlined">edit</span>
+            </button>
+              </td>
+            </tr>
+            <tr class="align-middle">
+              <th scope="row">#8</th>
+              <td>Tillie Lucero</td>
+              <td>tillie.lucero@mail.com</td>
+              <td>Yes</td>
+              <td>
+              <!-- Button trigger modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <span class="material-symbols-outlined me-4">visibility</span>
+            </button>
+              <!-- Button trigger modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span class="material-symbols-outlined">edit</span>
+            </button>
+              </td>
+            </tr>
+            <tr class="align-middle">
+              <th scope="row">#9</th>
+              <td>Sabrina Stephenson</td>
+              <td>sabrina.stephenson@mail.com</td>
+              <td>Yes</td>
+              <td>
+              <!-- Button trigger modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <span class="material-symbols-outlined me-4">visibility</span>
+            </button>
+              <!-- Button trigger modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span class="material-symbols-outlined">edit</span>
+            </button>
+              </td>
+            </tr>
+            <tr class="align-middle">
+              <th scope="row">#10</th>
+              <td>Annie Smith</td>
+              <td>annie.smith@mail.com</td>
+              <td>Yes</td>
+              <td>
+              <!-- Button trigger modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <span class="material-symbols-outlined me-4">visibility</span>
+            </button>
+              <!-- Button trigger modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span class="material-symbols-outlined">edit</span>
+            </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <section class="d-flex justify-content-end align-items-center ">
+          <span class="material-symbols-outlined border border-success icon-link icon-link-hover link-success">
+            chevron_left
+            </span>
+            <a href="#" class=" border border-success px-2 bg-success text-light">1</a>
+            <a href="#" class=" border border-success px-2">2</a>
+            <a href="#" class=" border border-success px-2">3</a>
+            <span class="material-symbols-outlined border border-success icon-link icon-link-hover link-success">
+              keyboard_arrow_right
+              </span>
+        </section>
+      </section>
+    </main>
+
+    <!-- VIEW Modal-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <div class="modal-body d-flex p-4">
+        <img src="/BackEndFormDesignedbyBootstrap-/assets/emir-3d7a4b39.jpeg" alt="emir" style="width: 141px;" class="me-4">
+        <div class="admin-info w-100 d-flex flex-column">
+          <div class="d-flex justify-content-between">
+            <p class="mb-2">#1</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div>
+          <p>Admin</p>
+        <h3 class="mb-2">Emir Wicks</h3>
+        <small class="gray-600 mb-3">emir.wicks@mail.com</small>
+        </div>
+        <div class="Verified d-flex align-items-center justify-content-between">
+          <small class="gray-900 py-1 px-2 bg-gray-100">Verified</small>
+          <span class="material-symbols-outlined text-success">
+            keyboard_arrow_up
+            </span>
+        </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Deactivate</button>
+        <button type="button" class="btn btn-success">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EDITION Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 gray-900" id="exampleModalLabel">Edit Admin</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <h6 class="gray-900">Account</h6>
+       <div class="mb-3">
+        <label for="name" class="form-label">name</label>
+        <input type="text" class="form-control" id="name" placeholder="Emir Wicks">
+      </div>
+       <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="emir.wicks@mail.com">
+      </div>
+      <hr>
+      <h6 class="gray-900 mb-3">Verification</h6>
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="d-flex">
+          <span class="material-symbols-outlined text-success me-2">check_circle</span>
+          <p class="gray-900">Verified</p>
+        </div>
+        <time datetime="" class="gray-900"><small>2020/4/12</small></time>
+      </div>
+      <button type="button" class="btn btn-outline-secondary gray-400 w-100" disabled>Send Verification Mail</button>
+      <hr>
+      <h6 class="gray-900 mb-3">Access Level</h6>
+      <div class="dropdown">
+        <button class="btn border-dark dropdown-toggle w-100 d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Admin
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+      <hr>
+      <h6 class="gray-900 mb-3">Custom Access</h6>
+      <div class="form-check">
+        <!-- <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> -->
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Lecture
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Coupon
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Message
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Setting
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+        <label class="form-check-label" for="flexCheckDefault">
+          Task Menu
+        </label>
+      </div>
+      <hr>
+      <h6 class="gray-900 mb-3">Deactivate Account</h6>
+      <div class="d-flex mb-3">
+        <span class="text-danger material-symbols-outlined me-2">
+          warning
+          </span>
+        <p class="text-danger">This cannot be undone!</p>
+      </div>
+      <button type="button" class="btn btn-outline-danger w-100">Deactivate This Account</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Add New Admin Modal-->
+<div class="modal fade" id="NewAdmin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">New Admin</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6 class="gray-900">Account</h6>
+        <div class="mb-3">
+         <label for="name" class="form-label">name</label>
+         <input type="text" class="form-control" id="name" >
+       </div>
+        <div class="mb-3">
+         <label for="exampleFormControlInput1" class="form-label">Email address</label>
+         <input type="email" class="form-control" id="exampleFormControlInput1" >
+       </div>
+       <hr>
+       <h6 class="gray-900 mb-3">Verification</h6>
+       <div class="d-flex justify-content-between align-items-center mb-3">
+         <div class="d-flex">
+           <span class="material-symbols-outlined text-danger me-2">warning</span>
+           <p class="gray-900">Unverified</p>
+         </div>
+         <time datetime="" class="gray-900"><small>2020/4/12</small></time>
+       </div>
+       <button type="button" class="btn btn-outline-secondary text-success w-100">Send Verification Mail</button>
+       <hr>
+       <h6 class="gray-900 mb-3">Access Level</h6>
+       <div class="dropdown">
+         <button class="btn border-dark dropdown-toggle w-100 d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Admin
+         </button>
+         <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="#">Action</a></li>
+           <li><a class="dropdown-item" href="#">Another action</a></li>
+           <li><a class="dropdown-item" href="#">Something else here</a></li>
+         </ul>
+       </div>
+       <hr>
+       <h6 class="gray-900 mb-3">Custom Access</h6>
+       <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+         <label class="form-check-label" for="flexCheckDefault">
+           Lecture
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+         <label class="form-check-label" for="flexCheckDefault">
+           Coupon
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+         <label class="form-check-label" for="flexCheckDefault">
+           Message
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+         <label class="form-check-label" for="flexCheckDefault">
+           Setting
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+         <label class="form-check-label" for="flexCheckDefault">
+           Task Menu
+         </label>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cancel</button>
+         <button type="button" class="btn btn-success">Add</button>
+       </div>
+    </div>
+  </div>
+</div>
+    <footer class="footer">我是 footer</footer>
+    
+  </body>
+</html>
