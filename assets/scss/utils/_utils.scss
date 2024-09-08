@@ -1,0 +1,35 @@
+.content {
+    width: calc(100% - 296px);
+    margin-left: auto;
+}
+
+.top {top: 45%;}
+
+.btn-m {margin-left: auto;}
+
+.fs-12 {font-size: 12px;}
+
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.star {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+// FILL 軸
+// 數值只有 0 和 1，0 代表為線框 icon，1 代表填滿的 icon
+// 預設值為 0
+// wght 軸
+// 定義筆畫粗細
+// 數值範圍介於 100~700 之間，數字越大筆畫越粗
+// 會影響到符號的整體大小
+// GRAD 軸
+// 數值介於 -25~200 之間
+// 覺得蠻像效果沒那麼顯著的 wght，查看官方文件有提到使用時機：
+// -25：可用在深色背景，減少眩光
+// 200：讓符號更佳醒目
+// 目前先記錄這樣，如果有新發現再來更新這部份。
+// opsz 軸
+// 數值介於 20dp 到 48dp 之間
+// 筆畫粗細會自動跟著圖示大小改變

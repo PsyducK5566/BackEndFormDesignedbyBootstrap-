@@ -1,0 +1,31 @@
+.index-title {
+  font-size: 100px;
+}
+
+.list-ad {
+  width: 286px;
+}
+
+.card-ad {
+  width: 100%;
+}
+// navbar須固定左側 max-width 296px 左側欄位須不重疊且外間距使用自動調整以 對齊。
+
+.list-group-item.active {
+  background-color:$gray-100;
+  color:$gray-900;
+  border-color:$gray-400;
+}
+
+.small-color {
+  color:$gray-600;
+}
+
+.bth-download {
+  background-color: $gray-100;
+  border-color: $gray-400;
+}
+
+.boundary {
+  border-top: 1px solid $gray-400;
+}
